@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <title>Palindrome Words</title>
+
+</head>
+<body>
+  <h1>Cari Palindrome</h1>
+  <a href="https://www.google.com">https://www.google.com</a>
+  <p id="result"></p>
+  <script type="text/javascript" charset="utf-8">
+    <!--
+    //let words = ['tang', 'tenet', 'dada', 'alala', 'bokep'];
+    getWords().catch(e => console.log(e));
+
+    //palindrome check
+    function palindromeCheck(word) {
+      if (word.length == 1) return false;
+      
+      //remove dash ("-")
+      word = word.replace('-',
+        '').toLowerCase();
+
+      
+      //compare for every letter
+      for (let i = 0, j = word.length - 1; i <= j; i++, j--) {
+        if (word.charAt(i) != word.charAt(j)) return false;
+      }
+
+      return true;
+    }
+
+    //import text
+    async function getWords() {
+      let file = await fetch('/Vocab.txt');
+      
+      if (file.status > 200) {;
+        throw new Error(file.status+', '+file.statusText);
+      }
+      
+      let text = await file.text();
+
+      //chop to an array and put to words
+      let words = text.split('\n');
+      //console.log(text.split('\n'));
+
+      let result = '';
+      
+      for (let word of words) {
+        if (palindromeCheck(word))
+          result += (word+'<br/>');
+      }
+
+      document.getElementById('result').innerHTML = result;
+      
+      /*return new Promise((resolve, reject) => {
+        resolve(words);
+      });*/
+    }
+    -->
+  </script>
+</body>
+</html>
